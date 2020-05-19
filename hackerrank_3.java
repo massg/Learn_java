@@ -31,4 +31,4 @@ public class hackerrank_3 {
             System.out.println("Weird");
         scanner.close();
     }
-}
+} 
