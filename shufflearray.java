@@ -1,6 +1,6 @@
 //https://leetcode.com/problems/shuffle-the-array/
 
-//Solution of the problem is given; main() is not provided ; Note the class name is also not the saame
+//Solution of the problem is given; main() is not provided ; Note the class name is also not the same
 
 class Solution {
     public int[] shuffle(int[] nums, int n) {
