@@ -13,18 +13,27 @@ public class Solution {
 
     // Complete the arrayManipulation function below.
     static long arrayManipulation(int n, int[][] queries) {
-        long[] ar = new long[n+1];
-        long max = 0;
+        long[] ar = new long[n+3];
         for(int i=0;i<queries.length;i++){
-                for(int k=queries[i][0];k<=queries[i][1];k++){
-                    ar[k] += queries[i][2];
-                    if(max<ar[k])
-                        max = ar[k];
-                }
+            int a = queries[i][0];
+            int b = queries[i][1];
+            int c = queries[i][2];
+            ar[a] += c;
+            ar[b+1] -= c;
+            }
+        long max = getMax(ar);
 
-        }
         return max;
 
+    }
+    private static long getMax(long[] ar){
+        long max = Long.MIN_VALUE;
+        long sum = 0;
+        for(int i=0;i<ar.length;i++){
+            sum+=ar[i];
+            max = Math.max(sum,max);
+        }
+        return max;
     }
 
     private static final Scanner scanner = new Scanner(System.in);
