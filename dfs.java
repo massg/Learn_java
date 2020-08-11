@@ -4,7 +4,7 @@ class dfs{
   int V;
  LinkedList<Integer> adj[];
   @SuppressWarnings("unchecked")
-  dfs(int v){
+  dfs (int v){
     V=v;
     adj = new LinkedList[v];
     for(int i=0;i<v;i++)
