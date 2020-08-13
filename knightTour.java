@@ -43,9 +43,11 @@ class knightTour{
           {
             for(int l=0;l<n;l++)
               System.out.printf("%d ",board[k][l]);
+            System.out.println("");
           }
-          System.out.println("");
+
         }
+          System.out.println("");
         refresh(board,n);
       }
     }
