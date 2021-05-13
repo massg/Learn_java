@@ -18,9 +18,11 @@ class missing_no_array{
         for(int i=0;i<ar.length-1;i++){
             ar[i] = s.nextInt();
         }
-        System.out.println(MissingNumber(ar,n));
+        System.out.println(MissingNumber1(ar,n)); // Method 1 : Summation Formula
+        // Integer overflow could happen in method 1
+        System.out.println(MissingNumber2(ar,n)); // Modification for integer overflow
     } 
-    static int MissingNumber(int array[], int n) {
+    static int MissingNumber1(int array[], int n) {
         // Your Code Here
         int sum = (n*(n+1))/2;
         int ar_sum=0;
@@ -29,5 +31,13 @@ class missing_no_array{
         }
         return sum-ar_sum;
     }
-    
+    static int MissingNumber2(int array[],int n){
+        int sum = 1;
+        int c = 2;
+        for(int i=0;i<array.length;i++){
+            sum-=array[i]+c;
+            c++;
+        }
+        return sum;
+    }
 }
